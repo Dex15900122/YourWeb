@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   right: 0; 
-  z-index: 100;    /* 加上這一行 */
+  z-index: 100;    /* 加上這一行永遠顯示在最上方，要高於其他的元素，因此我們要幫他定義一個大於 0 的數字 */
 
 }
 
@@ -18,8 +18,8 @@
 
 
   position: relative;
-  top: 74.609px;
-  padding: 100px;
+  top: 24.609px;
+  padding: 60px;
 }
 
 .container {
@@ -29,11 +29,11 @@
   margin: 0 auto;/* margin 設為 auto 時，這個元素會自動分配兩側的空間，也就是達成了置中的效果*/
 }
 #content > .container > div {
-  padding: 74.609px ;
+  padding: 74px ;
 }
 
 #my-work{
-  padding-top : 300px ;
+  padding-top : 200px ;
 }
 .menu li {
   width: 150px;
@@ -70,11 +70,13 @@ li:hover a {
 }
 #my-avatar img {
   
-  width:100%;
+  width: 200px;
 }
 h1 {
   margin-bottom: 0;/*讓 h1 和 h3 的距離靠近一些——透過定義 margin 來達成目的。*/
+  text-align: center;
 }
+
 h3 {
   margin: 0;
 }
@@ -137,7 +139,7 @@ width:100%;}
 
 
 #contact-me{
-  padding-top : 300px ;
+  padding-top : 200px ;
 }
 
 form.contact-form {
@@ -176,11 +178,7 @@ form.contact-form {
 .form-row button:active {
   background-color: #407FC7;
 }
-<!-- 在內容區域的中間加上水平線 -->
 
-<hr class="bar">
-
-<!-- 水平線的樣式 -->
 
 hr.bar {
   border: 2px solid #ff6600;
@@ -189,9 +187,7 @@ hr.bar {
 .menu {
   float: right;
 }
-h1 {
-  text-align: center;
-}
+
 
 #about h1 {
   margin-bottom: 0;
@@ -273,16 +269,11 @@ h1 {
   display: block;
   margin: 15px auto;
 }
+.item {
+    max-width: 100%;
+  }
 
-.item img
-{
-max-width: 100%;
-}
 
-.item item-info img
-{
-max-width: 100%;
-}
 
  form.contact-form {
     width: 80%;
