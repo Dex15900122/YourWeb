@@ -18,8 +18,13 @@
 
 
   position: relative;
+<<<<<<< HEAD
   top: 74.609px;
   padding: 10px;
+=======
+  top: 24.609px;
+  padding: 60px;
+>>>>>>> a7b8c743bab3a6f7e72f2c9106c1ab88aa5a94fa
 }
 
 .container {
@@ -29,7 +34,11 @@
   margin: 0 auto;/* margin 設為 auto 時，這個元素會自動分配兩側的空間，也就是達成了置中的效果*/
 }
 #content > .container > div {
+<<<<<<< HEAD
   padding: 34px ;
+=======
+  padding: 74px ;
+>>>>>>> a7b8c743bab3a6f7e72f2c9106c1ab88aa5a94fa
 }
 
 #my-work{
