@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;/*所有矩形容器都套用 border-box，是成為現代網頁開發者很重要的基本動作*/
 }
 
 #nav {
@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   right: 0; 
-  z-index: 100;    /* 加上這一行 */
+  z-index: 100;    /* 加上這一行永遠顯示在最上方，要高於其他的元素，因此我們要幫他定義一個大於 0 的數字 */
 
 }
 
@@ -19,21 +19,21 @@
 
   position: relative;
   top: 74.609px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .container {
   
 
   width: 800px;
-  margin: 0 auto;
+  margin: 0 auto;/* margin 設為 auto 時，這個元素會自動分配兩側的空間，也就是達成了置中的效果*/
 }
 #content > .container > div {
-  padding: 74.609px ;
+  padding: 34px ;
 }
 
 #my-work{
-  padding: 150px 
+  padding-top : 200px ;
 }
 .menu li {
   width: 150px;
@@ -42,7 +42,7 @@
   border: 1px solid #fff;
   border-radius: 8px;
   list-style-type: none;
-  text-align: center;
+  text-align: center;/*display: inline,置中對齊*/
   background-color: #ff6600;
   color: #fff;
   display: inline-block;
@@ -65,35 +65,40 @@ li:hover a {
 
 #my-avatar {
   
-  float: left;
+  float: left;/*Float 屬性讓原本應該一次佔滿一行的 block 元素變得可以緊靠在一起*/
   margin-right: 20px;
 }
 #my-avatar img {
+  
   width: 200px;
 }
 h1 {
-  margin-bottom: 0;
+  margin-bottom: 0;/*讓 h1 和 h3 的距離靠近一些——透過定義 margin 來達成目的。*/
+  text-align: center;
 }
+
 h3 {
   margin: 0;
 }
 table {
-  font-size: 14px;
-  text-align: left;
+  font-size: 14px;/*調整字體大小*/
+  text-align: left;/*內容靠左；*/
 }
 th, td {
-  vertical-align: top;
+  vertical-align: top;/*讓 td 和 th 的內容靠上對齊；*/
 }
 
 td {
   color: #666;
-  padding-left: 10px;
+  padding-left: 10px;/*離th遠一點*/
 }
 hr {
   border: 0.5px solid #eee;
 }
 
 /* my work */
+p {text-align: center;}
+
 
 .item {
   position: relative;
@@ -101,29 +106,41 @@ hr {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 10px;
+  padding:30px;
 }
 
 .item-info {
   
-  background-color: rgba(255,255,255,.8);   /* 背景半透明 */
+  
+  background-color: rgba(255,255,255,.6);  /* 背景半透明 */
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   text-align: center;
  
-   display: none;
+   display: none;/*display 的方式設為 none，等觸發 :hover 事件時，再將切為 block。
+
+*/
     border-radius:10px;
 }
+
+
+
 .item img
 {
 width:100%;}
 
-.item:hover .item-info {
+.item:hover .item-info { /*:hover - 游標移過的地方*/
   display: block;
+
 }
 
+
+#contact-me{
+  padding-top : 200px ;
+}
 
 form.contact-form {
   width: 50%;
@@ -161,11 +178,7 @@ form.contact-form {
 .form-row button:active {
   background-color: #407FC7;
 }
-<!-- 在內容區域的中間加上水平線 -->
 
-<hr class="bar">
-
-<!-- 水平線的樣式 -->
 
 hr.bar {
   border: 2px solid #ff6600;
@@ -174,9 +187,7 @@ hr.bar {
 .menu {
   float: right;
 }
-h1 {
-  text-align: center;
-}
+
 
 #about h1 {
   margin-bottom: 0;
@@ -184,15 +195,19 @@ h1 {
 }
 #my-work-gallery {
     text-align: center;
+    display: inline-block;
 }
+
+
+
 
 
 @media screen and (min-width: 1024px) {
-  .menu-button {
+  .menu-button,
+  .menu-button-checkbox {
     display: none;
   }
 }
-
 
 
 
@@ -215,6 +230,54 @@ h1 {
     border: 0;
   }
 
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+.menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: red;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+
+#my-avatar {
+  width: 100%; 
+}
+
+#my-avatar img {
+  display: block;
+  margin: 15px auto;
+}
+.item {
+    max-width: 100%;
+  }
+
+
+
+ form.contact-form {
+    width: 80%;
+  }
 
 
 
