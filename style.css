@@ -3,9 +3,9 @@
 }
 
 #nav {
-  background-color: #ff6600;
+  background-color: #7744FF;
   width: 100%;
-  border: 1px solid red;
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -52,7 +52,7 @@
   border-radius: 8px;
   list-style-type: none;
   text-align: center;/*display: inline,置中對齊*/
-  background-color: #ff6600;
+  background-color: #7744FF;
   color: #fff;
   display: inline-block;
 }
@@ -63,12 +63,12 @@ a {
 }
 
 li:hover  {
-  border: 1px solid #ff6600;
+  border: 1px solid #7744FF;
   background-color: #fff;
 }
 
 li:hover a {
-  color: #ff6600;
+  color: #7744FF;
   font-weight: 800;
 }
 
@@ -118,21 +118,27 @@ p {text-align: center;}
   padding:30px;
 }
 
+
+
 .item-info {
   
   
-  background-color: rgba(255,255,255,.6);  /* 背景半透明 */
+  background-color: rgba(255,255,255,0.6);  /* 背景半透明 */
   position: absolute;
   top: 0;
   left: 0;
   width: 90%;
   height: 90%;
   text-align: center;
- 
-   display: none;/*display 的方式設為 none，等觸發 :hover 事件時，再將切為 block。
+  
+  display: none;/*display 的方式設為 none，等觸發 :hover 事件時，再將切為 block。
 
 */
     border-radius:10px;
+  max-width:100%;
+  
+  
+  padding:18px;
 }
 
 
@@ -190,7 +196,7 @@ form.contact-form {
 
 
 hr.bar {
-  border: 2px solid #ff6600;
+  border: 2px solid  #7744FF;
   width: 80px;
 }
 .menu {
